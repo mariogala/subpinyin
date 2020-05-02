@@ -6,15 +6,19 @@ Script to add pinyin subtitles to Chinese characters
 * Cjklib: https://github.com/cburgmer/cjklib
 
 ## Usage
-The Chinese text is read from standard input.
+The Chinese text is read from standard input, line by line.
 
-The output including the Chinese text and pinyin subtitles in written to standard output.
+For each line, the script then writes to standard output:
+* the original line of Chinese text, with tabs separating the characters;
+* the line of pinyin subtitles, also tab-separated.
+
+For Chinese characters that have more than one romanisation, all the romanisations are included, separated by slash.
 
 ### Parameters
 ```
 -r, --romanisation, --romanization
     Romanisation to use in the output
-        Pinyin: Hanyu Pinyin, using accents as tone marks
+        Pinyin (default): Hanyu Pinyin, using accents as tone marks
         PinyinNum: Hanyu Pinyin, using numbers as tone marks
         CantoneseYale: Cantonese Yale, using accents as tone marks
         CantoneseYaleNum: Cantonese Yale, using numbers as tone marks
